@@ -8,18 +8,18 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class DepartmentService {
-    private DepartmentRepository repository;
+    private DepartmentRepository departmentRepository;
 
     @Autowired
     public DepartmentService(DepartmentRepository repository) {
-        this.repository = repository;
+        this.departmentRepository = repository;
     }
 
     public Department saveDepartment(Department department) {
-        return repository.save(department);
+        return departmentRepository.save(department);
     }
 
-    public Department findDepartmentById(Long id) {
-        return repository.findById(id).get();
+    public Department findDepartmentById(Long departmentId) {
+        return departmentRepository.findById(departmentId).get();
     }
 }

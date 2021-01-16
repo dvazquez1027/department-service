@@ -22,12 +22,12 @@ public class DepartmentController {
     }
 
     @PostMapping
-    public Department saveDepartment(@RequestBody  Department department) {
+    public Department createDepartment(@RequestBody  Department department) {
         return service.saveDepartment(department);
     }
 
     @GetMapping("/{id}")
-    public Department getDepartmentById(@PathVariable("id") Long id) {
-        return service.findDepartmentById(id);
+    public Department readDepartment(@PathVariable("id") Long departmentId) {
+        return service.findDepartmentById(departmentId);
     }
 }
