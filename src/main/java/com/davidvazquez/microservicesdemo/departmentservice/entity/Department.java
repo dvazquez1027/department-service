@@ -1,4 +1,4 @@
-package com.davidvazquez.department.departmentservice.entity;
+package com.davidvazquez.microservicesdemo.departmentservice.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

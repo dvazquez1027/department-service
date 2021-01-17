@@ -1,7 +1,7 @@
-package com.davidvazquez.department.departmentservice.service;
+package com.davidvazquez.microservicesdemo.departmentservice.service;
 
-import com.davidvazquez.department.departmentservice.entity.Department;
-import com.davidvazquez.department.departmentservice.repository.DepartmentRepository;
+import com.davidvazquez.microservicesdemo.departmentservice.entity.Department;
+import com.davidvazquez.microservicesdemo.departmentservice.repository.DepartmentRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

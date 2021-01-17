@@ -1,7 +1,7 @@
-package com.davidvazquez.department.departmentservice.controller;
+package com.davidvazquez.microservicesdemo.departmentservice.controller;
 
-import com.davidvazquez.department.departmentservice.entity.Department;
-import com.davidvazquez.department.departmentservice.service.DepartmentService;
+import com.davidvazquez.microservicesdemo.departmentservice.entity.Department;
+import com.davidvazquez.microservicesdemo.departmentservice.service.DepartmentService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

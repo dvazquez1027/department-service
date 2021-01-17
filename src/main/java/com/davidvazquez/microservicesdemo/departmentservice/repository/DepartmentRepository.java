@@ -1,6 +1,6 @@
-package com.davidvazquez.department.departmentservice.repository;
+package com.davidvazquez.microservicesdemo.departmentservice.repository;
 
-import com.davidvazquez.department.departmentservice.entity.Department;
+import com.davidvazquez.microservicesdemo.departmentservice.entity.Department;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

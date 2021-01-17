@@ -1,4 +1,4 @@
-package com.davidvazquez.department.departmentservice;
+package com.davidvazquez.microservicesdemo.departmentservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
