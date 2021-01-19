@@ -11,8 +11,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RestController
 @RequestMapping("/departments")
+@Slf4j
 public class DepartmentController {
     private DepartmentService service;
 
@@ -23,11 +26,18 @@ public class DepartmentController {
 
     @PostMapping
     public DepartmentDTO createDepartment(@RequestBody DepartmentDTO departmentDTO) {
-        return service.saveDepartment(departmentDTO);
+        
+        log.info("Entering DepartmentController::createDepartment");
+        DepartmentDTO result = service.saveDepartment(departmentDTO);
+        log.info("Exiting DepartmentController::createDepartment");
+        return result;
     }
 
     @GetMapping("/{id}")
     public DepartmentDTO readDepartment(@PathVariable("id") Long departmentId) {
-        return service.findDepartmentById(departmentId);
+        log.info("Entering DepartmentController.readDepartment");
+        DepartmentDTO result = service.findDepartmentById(departmentId);
+        log.info("Exiting DepartmentController.readDepartment");
+        return result;
     }
 }
