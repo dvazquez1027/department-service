@@ -1,6 +1,6 @@
 package com.davidvazquez.microservicesdemo.departmentservice.controller;
 
-import com.davidvazquez.microservicesdemo.departmentservice.entity.Department;
+import com.davidvazquez.microservicesdemo.departmentservice.dto.DepartmentDTO;
 import com.davidvazquez.microservicesdemo.departmentservice.service.DepartmentService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,12 +22,12 @@ public class DepartmentController {
     }
 
     @PostMapping
-    public Department createDepartment(@RequestBody  Department department) {
-        return service.saveDepartment(department);
+    public DepartmentDTO createDepartment(@RequestBody DepartmentDTO departmentDTO) {
+        return service.saveDepartment(departmentDTO);
     }
 
     @GetMapping("/{id}")
-    public Department readDepartment(@PathVariable("id") Long departmentId) {
+    public DepartmentDTO readDepartment(@PathVariable("id") Long departmentId) {
         return service.findDepartmentById(departmentId);
     }
 }

@@ -1,6 +1,6 @@
 package com.davidvazquez.microservicesdemo.departmentservice.service;
 
-import com.davidvazquez.microservicesdemo.departmentservice.entity.Department;
+import com.davidvazquez.microservicesdemo.departmentservice.dto.DepartmentDTO;
 import com.davidvazquez.microservicesdemo.departmentservice.repository.DepartmentRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,11 +15,11 @@ public class DepartmentService {
         this.departmentRepository = repository;
     }
 
-    public Department saveDepartment(Department department) {
-        return departmentRepository.save(department);
+    public DepartmentDTO saveDepartment(DepartmentDTO departmentDTO) {
+        return DepartmentDTO.fromEntity(departmentRepository.save(DepartmentDTO.toEntity(departmentDTO)));
     }
 
-    public Department findDepartmentById(Long departmentId) {
-        return departmentRepository.findById(departmentId).get();
+    public DepartmentDTO findDepartmentById(Long departmentId) {
+        return DepartmentDTO.fromEntity(departmentRepository.findById(departmentId).get());
     }
 }
